@@ -9,12 +9,12 @@ void display_init() {
     pinMode(TFT_PIN_BL, OUTPUT);
     digitalWrite(TFT_PIN_BL, HIGH);
     tft.init();
-    tft.invertDisplay(true);
+    tft.invertDisplay(false);
     // Some ST77xx displays expect swapped byte order (RGB/BGR). Enable
     // swap here to match palette byte-order when needed.
     tft.setSwapBytes(true);
     // Use rotation 2 so the USB connector is at the top in portrait mode.
-    tft.setRotation(2);
+    tft.setRotation(1);
     tft.fillScreen(TFT_BLACK);
     ledcSetup(0, 5000, 8);
     ledcAttachPin(TFT_PIN_BL, 0);
