@@ -3,8 +3,8 @@
 
 // ─── Pins ───────────────────────────────────────────────────────────────────
 #define TFT_PIN_BL     21
-#define SCREEN_W       240
-#define SCREEN_H       320
+#define SCREEN_W       320
+#define SCREEN_H       240
 
 #define TOUCH_PIN_CS    33
 #define TOUCH_PIN_IRQ   36
@@ -31,7 +31,7 @@
 
 // Game area: top of the screen (keeps same relative area)
 // Previously 192 of 240 (0.8). For portrait (320px tall) use 0.8*320=256
-#define GAME_H 256
+#define GAME_H 240
 #define CTRL_Y 256
 #define CTRL_H 64
 
