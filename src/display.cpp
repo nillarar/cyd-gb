@@ -14,7 +14,7 @@ void display_init() {
     digitalWrite(TFT_PIN_BL, HIGH);
     tft.init();
     tft.invertDisplay(false);
-    tft.setSwapBytes(false);
+    tft.setSwapBytes(true);
     // Rotation 1 or 3 = Landscape (320x240). Use 3 if you want the USB port on the opposite side.
     tft.setRotation(1);
     tft.fillScreen(TFT_BLACK);
