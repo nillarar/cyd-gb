@@ -10,7 +10,7 @@ static bool button_board_present = false;
 
 // Deadzone thresholds around center (~128). Adjust if too sensitive or stiff.
 #define STICK_LOW_THRESHOLD  80
-#define STICK_HIGH_THRESHOLD 175
+#define STICK_HIGH_THRESHOLD 176
 
 static uint8_t read_reg(uint8_t reg) {
     Wire.beginTransmission(JOYSTICK_I2C_ADDR);
