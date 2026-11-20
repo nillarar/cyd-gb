@@ -17,9 +17,9 @@
 #define SD_PIN_MISO 19
 #define SD_PIN_SCK 18
 
-#define BUTTON_I2C_ADDR 0x20
-#define BUTTON_I2C_SDA  16
-#define BUTTON_I2C_SCL  17
+#define BUTTON_I2C_ADDR 0x5A
+#define BUTTON_I2C_SDA  27
+#define BUTTON_I2C_SCL  22
 
 #define LED_R_PIN 4
 #define LED_G_PIN -1
