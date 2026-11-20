@@ -89,7 +89,7 @@ static const char* palnames[NUM_PALETTES] = {
     "Sunset","Cherry","Ice","Chocolate","Mint",
     "Peach","Lavender","Neon","Inverted","Gold"
 };
-static uint8_t curpal = 0;
+static uint8_t curpal = 1;
 
 void emu_set_palette(uint8_t i) { if (i<NUM_PALETTES) curpal=i; }
 uint8_t emu_get_palette() { return curpal; }
