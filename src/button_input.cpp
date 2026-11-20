@@ -43,8 +43,8 @@ static uint16_t read_nulllab_buttons() {
 
     // Note: If Up/Down or Left/Right feel inverted, swap the '<' and '>' signs below
     if (y != 0xFF) {
-        if (y < STICK_LOW_THRESHOLD)  buttons |= GB_BTN_UP;
-        if (y > STICK_HIGH_THRESHOLD) buttons |= GB_BTN_DOWN;
+        if (y < STICK_LOW_THRESHOLD)  buttons |= GB_BTN_DOWN;
+        if (y > STICK_HIGH_THRESHOLD) buttons |= GB_BTN_UP;
     }
     if (x != 0xFF) {
         if (x < STICK_LOW_THRESHOLD)  buttons |= GB_BTN_LEFT;
@@ -53,10 +53,10 @@ static uint16_t read_nulllab_buttons() {
 
     // 2. Read Face Buttons (Mapped to A, B, Start, and Select/Menu)
     // Change the GB_BTN_* assignments below to match your preferred button layout
-    if (is_pressed(BUTTON_A_REG))  buttons |= GB_BTN_A;
+    if (is_pressed(BUTTON_A_REG))  buttons |= GB_BTN_SELECT;
     if (is_pressed(BUTTON_B_REG))  buttons |= GB_BTN_B;
-    if (is_pressed(BUTTON_C_REG))  buttons |= GB_BTN_START;
-    if (is_pressed(BUTTON_D_REG))  buttons |= GB_BTN_SELECT; // Change to GB_BTN_MENU if defined in button_input.h
+    if (is_pressed(BUTTON_C_REG))  buttons |= GB_BTN_A;
+    if (is_pressed(BUTTON_D_REG))  buttons |= GB_BTN_START; // Change to GB_BTN_MENU if defined in button_input.h
     // if (is_pressed(BUTTON_OK_REG)) buttons |= GB_BTN_SELECT; // Optional: stick click
 
     return buttons;
